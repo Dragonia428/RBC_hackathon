@@ -17,12 +17,6 @@
     h1 {
 
         text-align: center;
-<<<<<<< HEAD
-
-
-=======
-        color : white;
->>>>>>> upstream/master
     }
     body {
         background-image : url("{{url_for('static', filename='building.png')}}");
@@ -31,12 +25,9 @@
         background-size: 100%;
         background-color: transparent;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> upstream/master
     input[type=text]:focus {
-        width: 60%;
+        width: 50%;
     }
     img {
         display:block;
@@ -47,38 +38,33 @@
         height : 45px;
         width : 60px;
     }
+    form {
+        text-align: center;
+    }
 
 </style>
 </head>
 
 <body>
-<<<<<<< HEAD
+
 <img src = "{{url_for('static', filename='abacus.png')}}" width = 200 height = 100>
 <div id="mystruct">
     <form>
-      <input type="text" name="search" id="searchbar" placeholder="Search the database..">
+      <input type="text" name="search" id="searchbar" placeholder="Search..">
         <button>Search</button>
     </form>
 </div>
     {% if search_param %}
-    <p>The query you entered was : {{search_param}}</p>
+    <p>The query you entered was : {{search_param}}
+    </p>
+<p>The query you entered resulted in the following results: <br></p>
     {% for i in mytest %}
-    <div><p>{{ i }}</p></div>
+    <p>{{i}}</p>
     {% endfor %}
-=======
-
-<h1 >Abacus</h1>
-<div id="mystruct">
-    <form>
-      <input type="text" name="search" id="searchbar" placeholder="Search the database..">
-        <button type = "submit"><img src = "{{url_for('static', filename='Search-icon.png')}}" width ="25" height = "25"></button>
-    </form>
-    </div>
-
-    {% if search_param %}
-        <p>Searched string : {{ search_param }}  </p>
->>>>>>> upstream/master
     {% endif %}
+
+
+
 </body>
 
 
